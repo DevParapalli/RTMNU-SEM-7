@@ -5,6 +5,8 @@
 - [Practicals](./CNS/practical/)
 - [Theory](./CNS/theory/)
 
-### Past Papers
+## Elective 4 : [Deep Learning](./DL/)
 
-- [Winter - 23](./past-papers/winter23/Cryptography%20&%20Network%20Security.pdf)
+## Elective 5 : [Big Data Analysis](./BDA/)
+
+## [Past Papers](./past-papers/)

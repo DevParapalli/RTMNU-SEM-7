@@ -19,3 +19,18 @@
 - <https://github.com/The-Cryptography/C/tree/397a9f4fb2c43f3f1f76586b5607faabf5d3b18e/ciphers>
 - <https://github.com/31Sanskrati/Cryptography_Algorithms>
 - <https://github.com/Amey-Thakur/CRYPTOGRAPHY-AND-SYSTEM-SECURITY-AND-SYSTEM-SECURITY-LAB>
+
+## Past Resources
+
+Found on PasteBin, under user GCOEN
+
+- [Practical 1](./past-resources/1]Overview_of_CNS.pdf)
+- [Practical 2](./past-resources/2]Playfair_cipher.pdf)
+- [Practical 3](./past-resources/3]Hill_cipher.pdf)
+- [Practical 4](./past-resources/4]DES_algo.pdf)
+- [Practical 5](./past-resources/5]Blowfish_algo.pdf)
+- [Practical 6](./past-resources/6]AES_algo.pdf)
+- [Practical 7](./past-resources/7]Diffie_Hellman.pdf)
+- [Practical 8](./past-resources/8]RSA_key_cryptography.pdf)
+- [Practical 9](./past-resources/9]Digital_signature.pdf)
+- [Practical 10](./past-resources/10]SHA_algo.pdf)

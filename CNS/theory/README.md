@@ -7,3 +7,11 @@
 - [Unit-3](./CNS_3.pdf)
 - [Unit-4](./CNS_4.pdf)
 - [Unit-5](./CNS_5.pdf)
+
+## KDK
+
+- [Document](./CNS_KDK.pdf)
+
+## SENIOR
+
+- [Document](./CNS_SENIOR.pdf)
