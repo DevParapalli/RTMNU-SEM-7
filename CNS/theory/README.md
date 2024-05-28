@@ -15,3 +15,5 @@
 ## SENIOR
 
 - [Document](./CNS_SENIOR.pdf)
+- [CT1](./cns-ct1.jpg)
+- [CT2](./cns-ct2.jpg)
