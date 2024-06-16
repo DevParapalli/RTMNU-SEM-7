@@ -8,3 +8,7 @@
 
 
 Fetch from Vector Indexes (multiple) merge the docs, then rerank them using a common embedding
+
+Why is this needed ?
+
+Justifications:
