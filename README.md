@@ -9,4 +9,6 @@
 
 ## Elective 5 : [Big Data Analysis](./BDA/)
 
+## Elective 5 : [Natural Language Processing](./NLP/)
+
 ## [Past Papers](./past-papers/)
