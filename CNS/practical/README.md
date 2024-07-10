@@ -1,6 +1,19 @@
 # CNS Practicals
 
-## Aim
+## Aims
+
+1. [Overview of Cryptography and Network Security.](./practical-01/)
+2. [To write a program to implement Playfair cipher for encryption and decryption.](./practical-02/)
+3. [To write a program to implement Hill cipher for encryption and decryption.](./practical-03/)
+4. [To write a program to implement DES algorithm.](./practical-04/)
+5. [To write a program to implement Blowfish Algorithm.](./practical-05/)
+6. [To write a program to implement AES algorithm.](./practical-06/)
+7. [To write a program to implement Diffie-Hellman key exchange technique for symmetric Cryptography.](./practical-07/)
+8. [To write a program to implement RSA Algorithm.](./practical-08/)
+9. [To write a program to implement signature and digital signature technique.](./practical-09/)
+10. [To write a program to implement SHA algorithm.](./practical-10/)
+
+## Past Aims
 
 1. To study cryptography and network security
 2. To write c/java program to implement playfair cipher

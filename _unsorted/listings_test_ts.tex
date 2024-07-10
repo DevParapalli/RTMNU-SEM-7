@@ -1,0 +1,190 @@
+\documentclass{scrreprt}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+
+\makeatletter
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+%\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\definecolor{orange}{rgb}{1,0.45,0.13}		
+\definecolor{olive}{rgb}{0.17,0.59,0.20}
+\definecolor{brown}{rgb}{0.69,0.31,0.31}
+\definecolor{purple}{rgb}{0.38,0.18,0.81}
+\definecolor{lightblue}{rgb}{0.1,0.57,0.7}
+\definecolor{lightred}{rgb}{1,0.4,0.5}
+\usepackage{upquote}
+% CSS
+\lstdefinelanguage{CSS}{
+  keywords={color,background-image:,margin,padding,font,weight,display,position,top,left,right,bottom,list,style,border,size,white,space,min,width, transition:, transform:, transition-property, transition-duration, transition-timing-function},	
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  alsoletter={:},
+  alsodigit={-}
+}
+
+% JavaScript
+\lstdefinelanguage{JavaScript}{
+  morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]'
+}
+
+\lstdefinelanguage{HTML5}{
+  language=html,
+  sensitive=true,	
+  alsoletter={<>=-},	
+  morecomment=[s]{<!-}{-->},
+  tag=[s],
+  otherkeywords={
+  % General
+  >,
+  % Standard tags
+	<!DOCTYPE,
+  </html, <html, <head, <title, </title, <style, </style, <link, </head, <meta, />,
+	% body
+	</body, <body,
+	% Divs
+	</div, <div, </div>, 
+	% Paragraphs
+	</p, <p, </p>,
+	% scripts
+	</script, <script,
+  % More tags...
+  <canvas, /canvas>, <svg, <rect, <animateTransform, </rect>, </svg>, <video, <source, <iframe, </iframe>, </video>, <image, </image>, <header, </header, <article, </article
+  },
+  ndkeywords={
+  % General
+  =,
+  % HTML attributes
+  charset=, src=, id=, width=, height=, style=, type=, rel=, href=,
+  % SVG attributes
+  fill=, attributeName=, begin=, dur=, from=, to=, poster=, controls=, x=, y=, repeatCount=, xlink:href=,
+  % properties
+  margin:, padding:, background-image:, border:, top:, left:, position:, width:, height:, margin-top:, margin-bottom:, font-size:, line-height:,
+	% CSS3 properties
+  transform:, -moz-transform:, -webkit-transform:,
+  animation:, -webkit-animation:,
+  transition:,  transition-duration:, transition-property:, transition-timing-function:,
+  }
+}
+
+% TypeScript language definition
+\lstdefinelanguage{TypeScript}{
+  language=JavaScript,
+  morekeywords={interface, type, implements, enum, declare, namespace, abstract, as, is, keyof, typeof},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]'
+}
+
+% TypeScript style definition
+\lstdefinestyle{typescript}{%
+  language=TypeScript,
+  basicstyle=\footnotesize\ttfamily,
+  numbers=left,
+  numberstyle=\tiny\color{darkgray},
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{lightgray},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  breaklines=true,
+  breakatwhitespace=true,
+  breakautoindent=true,
+  linewidth=\textwidth,
+  captionpos=b,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape,
+  stringstyle=\ttfamily,
+  emphstyle=\underbar,
+  frame=single,
+  rulecolor=\color{black},
+  framesep=3pt,
+  xleftmargin=17pt,
+  framexleftmargin=17pt,
+  framexrightmargin=5pt,
+  framexbottommargin=4pt,
+}
+
+\begin{document}
+
+\chapter{TypeScript Code Example}
+
+Below is an example of TypeScript code using our custom greyscale listings style:
+
+\begin{lstlisting}[style=typescript, caption=Sample TypeScript Code]
+// Interface definition
+interface Person {
+  name: string;
+  age: number;
+  email?: string;
+}
+
+// Function with type annotations
+function greet(person: Person): string {
+  return `Hello, ${person.name}! You are ${person.age} years old.`;
+}
+
+// Using the interface and function
+const john: Person = {
+  name: "John Doe",
+  age: 30,
+  email: "john@example.com"
+};
+
+console.log(greet(john));
+
+// Generic function
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output = identity<string>("TypeScript is awesome");
+console.log(output);
+
+// Class with access modifiers
+class Animal {
+  private name: string;
+  protected species: string;
+
+  constructor(name: string, species: string) {
+    this.name = name;
+    this.species = species;
+  }
+
+  public makeSound(sound: string): void {
+    console.log(`${this.name} says ${sound}`);
+  }
+}
+
+// Inheritance
+class Cat extends Animal {
+  constructor(name: string) {
+    super(name, "Felis catus");
+  }
+
+  public purr(): void {
+    this.makeSound("purr");
+  }
+}
+
+const whiskers = new Cat("Whiskers");
+whiskers.purr();
+\end{lstlisting}
+
+This example demonstrates various TypeScript features, including interfaces, functions with type annotations, generics, classes with access modifiers, and inheritance.
+
+\end{document}
