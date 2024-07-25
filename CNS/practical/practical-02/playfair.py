@@ -50,8 +50,8 @@ def playfair_decrypt(ciphertext, key):
     return plaintext
 
 # Example usage
-key = "KEYWORD"
-plaintext = "HELLOWORLD"
+key = "DEVANSH"
+plaintext = "CNSPRACTICALTWO"
 ciphertext = playfair_encrypt(plaintext, key)
 decrypted = playfair_decrypt(ciphertext, key)
 

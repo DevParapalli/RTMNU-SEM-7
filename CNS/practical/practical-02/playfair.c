@@ -113,9 +113,9 @@ void display_matrix(char matrix[SIZE][SIZE]) {
 }
 
 int main() {
-    char key[] = "KEYWORD";
+    char key[] = "DEVANSH";
     char matrix[SIZE][SIZE];
-    char plaintext[] = "HELLOWORLD";
+    char plaintext[] = "CNSPRACTICALTWO";
     char ciphertext[100], decrypted[100];
 
     prepare_key(key, matrix);
