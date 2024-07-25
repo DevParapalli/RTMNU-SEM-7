@@ -4,4 +4,7 @@ Aim: To write a program to implement Playfair cipher for encryption and decrypti
 
 [PDF](./practical2.pdf)
 
+[C](./playfair.c)
+[Python](./playfair.py)
+
 [TeX](./practical2.tex)
