@@ -3,8 +3,11 @@
 \usepackage{amsmath}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{graphicx}
 
 \begin{document}
+
+\pagenumbering{gobble}
 
 \section*{Playfair Cipher: Theoretical Overview}
 
@@ -90,6 +93,19 @@ For each pair of plaintext letters $(a,b)$:
 
 % \lstset{style=mystyle}
 
-\lstinputlisting[caption=Playfair Cipher Implementation,language=Python,basicstyle=\ttfamily\footnotesize, captionpos=t, numbers=left, breaklines=true]{playfair.py}
+\lstinputlisting[caption=playfair.py,language=Python,basicstyle=\ttfamily\footnotesize, captionpos=t, numbers=left, breaklines=true]{playfair.py}
+
+\begin{figure}[h]
+    \caption{Output}
+    \centering
+    \includegraphics[width=\textwidth]{output.png}
+\end{figure}
+
+\newpage
+
+% \begin{center}
+%     \textbf{Output}
+%     \includegraphics[width=\textwidth]{output.png}
+% \end{center}
 
 \end{document}
