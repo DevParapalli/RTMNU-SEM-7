@@ -5,7 +5,7 @@ import math
 
 class HillCipher:
     
-    _alphabet = string.ascii_uppercase + '1234567890 .-:$' # 29 characters, math -> mod 29
+    _alphabet = string.ascii_uppercase + '1234567890 .-:$'
     mod = len(_alphabet)
     
     @staticmethod
@@ -25,10 +25,6 @@ class HillCipher:
         det = int(round(np.linalg.det(self.encryption_key))) % self.mod
         if det == 0 or math.gcd(det, self.mod) != 1:
             raise ValueError('Invalid Key: Key Matrix is not invertible modulo 29')
-        
-        # det_inv = pow(det, -1, self.mod)
-        # adjugate = np.round(det * np.linalg.inv(self.encryption_key)).astype(int)
-        # self.decryption_key = (det_inv * adjugate % self.mod).astype(int)
         
         self.decryption_key = np.array(sp.Matrix(self.encryption_key).inv_mod(self.mod)).astype('int')
         
@@ -75,5 +71,3 @@ print(f'[ENCRYPTED]\n{e_text}')
 print(f'[DECRYPTION KEY]\n{cipher.decryption_key}')
 d_text = cipher.decrypt(e_text)
 print(f'[DECRYPTED]\n{d_text}')
-
-
