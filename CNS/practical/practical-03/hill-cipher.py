@@ -1,24 +1,41 @@
 import numpy as np
-import sympy as sp
 import string
 import math
+
+
+def modinv(num, mod):
+    for i in range(1, mod):
+        if (num * i) % mod == 1:
+            return i
+    return None
+
+def modinv_matrix(matrix, mod):
+    det = int(round(np.linalg.det(matrix)))
+    inv_det = modinv(det, mod)
+    adj_mat = (np.linalg.inv(matrix).T * det).T
+    mat_inv = (inv_det * adj_mat) % mod
+    return np.round(mat_inv).astype('int')
 
 class HillCipher:
     
     _alphabet = string.ascii_uppercase + '1234567890 .-:$'
     mod = len(_alphabet)
     
-    @staticmethod
-    def _char_to_num(char):
-        return HillCipher._alphabet.index(char)
     
-    @staticmethod
-    def _num_to_char(num):
-        return HillCipher._alphabet[num]
+    def _char_to_num(self, char):
+        return self._alphabet.index(char)
     
-    def __init__(self, key: str):
+    
+    def _num_to_char(self, num):
+        return self._alphabet[num]
+    
+    def __init__(self, key: str, alphabet=None):
         self.key = key
         self._key_size = math.ceil(math.sqrt(len(key)))
+        
+        if alphabet:
+            self._alphabet = alphabet
+            self.mod = len(alphabet)
         
         self.encryption_key = np.array([self._char_to_num(char) for char in key.upper()] + [26] * (self._key_size**2 - len(self.key)), dtype='int').reshape(self._key_size, self._key_size)
         
@@ -26,7 +43,7 @@ class HillCipher:
         if det == 0 or math.gcd(det, self.mod) != 1:
             raise ValueError('Invalid Key: Key Matrix is not invertible modulo 29')
         
-        self.decryption_key = np.array(sp.Matrix(self.encryption_key).inv_mod(self.mod)).astype('int')
+        self.decryption_key = modinv_matrix(self.encryption_key, self.mod)
         
     def encrypt(self, plaintext: str):
         _plaintext = [self._char_to_num(c) for c in plaintext.upper()]
