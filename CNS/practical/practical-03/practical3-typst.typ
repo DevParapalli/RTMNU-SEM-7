@@ -1,7 +1,11 @@
+#import "@preview/codly:1.0.0": *
+#show: codly-init.with()
+#codly(zebra-fill: none, display-icon: false, display-name: false, smart-indent: true)
 // #show: project.with(
 //   title: "Hill Cipher: Theoretical Overview",
 //   authors: (),
 // )
+
 
 = Hill Cipher: Theoretical Overview
 
@@ -110,14 +114,21 @@ The Hill cipher can also be extended to work with larger blocks of letters by us
 
 #align(center)[Listing 1: hill-cipher.py]
 
+#set text(size: 12pt)
+
 #raw(
   read("hill-cipher.py"),
-  lang: "python"
+  lang: "python",
+  block: true
 )
 
 #pagebreak()
+
+#v(1fr)
 
 #figure(
   image("output.png", width: 100%),
   caption: [Output]
 )
+
+#v(1fr)
