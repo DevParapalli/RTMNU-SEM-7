@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <line x1="0" y1="100" x2="300" y2="100" stroke="black" stroke-width="1"/>
+  <line x1="150" y1="0" x2="150" y2="200" stroke="black" stroke-width="1"/>
+  
+  <!-- True function -->
+  <path d="M0,100 Q150,50 300,100" fill="none" stroke="blue" stroke-width="2"/>
+  
+  <!-- Overfit model -->
+  <path d="M0,100 C50,80 100,120 150,50 C200,20 250,180 300,100" fill="none" stroke="red" stroke-width="2"/>
+  
+  <!-- Data points -->
+  <circle cx="50" cy="90" r="3" fill="black"/>
+  <circle cx="100" cy="70" r="3" fill="black"/>
+  <circle cx="150" cy="50" r="3" fill="black"/>
+  <circle cx="200" cy="80" r="3" fill="black"/>
+  <circle cx="250" cy="110" r="3" fill="black"/>
+  
+  <text x="280" y="110" font-family="Arial" font-size="12">x</text>
+  <text x="160" y="20" font-family="Arial" font-size="12">y</text>
+  <text x="10" y="20" font-family="Arial" font-size="12" fill="blue">True function</text>
+  <text x="10" y="40" font-family="Arial" font-size="12" fill="red">Overfit model</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Input Layer -->
+  <circle cx="50" cy="50" r="20" fill="#6495ED"/>
+  <circle cx="50" cy="150" r="20" fill="#6495ED"/>
+  <circle cx="50" cy="250" r="20" fill="#6495ED"/>
+  
+  <!-- Hidden Layer -->
+  <circle cx="200" cy="50" r="20" fill="#6495ED"/>
+  <circle cx="200" cy="117" r="20" fill="#D3D3D3" stroke="#FF0000" stroke-width="2"/>
+  <line x1="185" y1="102" x2="215" y2="132" stroke="#FF0000" stroke-width="2"/>
+  <line x1="185" y1="132" x2="215" y2="102" stroke="#FF0000" stroke-width="2"/>
+  <circle cx="200" cy="183" r="20" fill="#6495ED"/>
+  <circle cx="200" cy="250" r="20" fill="#6495ED"/>
+  
+  <!-- Output Layer -->
+  <circle cx="350" cy="100" r="20" fill="#6495ED"/>
+  <circle cx="350" cy="200" r="20" fill="#6495ED"/>
+  
+  <!-- Connections -->
+  <!-- Input to Hidden -->
+  <line x1="70" y1="50" x2="180" y2="50" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="50" x2="180" y2="183" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="50" x2="180" y2="250" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="150" x2="180" y2="50" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="150" x2="180" y2="183" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="150" x2="180" y2="250" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="250" x2="180" y2="50" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="250" x2="180" y2="183" stroke="#000" stroke-width="1"/>
+  <line x1="70" y1="250" x2="180" y2="250" stroke="#000" stroke-width="1"/>
+  
+  <!-- Hidden to Output -->
+  <line x1="220" y1="50" x2="330" y2="100" stroke="#000" stroke-width="1"/>
+  <line x1="220" y1="50" x2="330" y2="200" stroke="#000" stroke-width="1"/>
+  <line x1="220" y1="183" x2="330" y2="100" stroke="#000" stroke-width="1"/>
+  <line x1="220" y1="183" x2="330" y2="200" stroke="#000" stroke-width="1"/>
+  <line x1="220" y1="250" x2="330" y2="100" stroke="#000" stroke-width="1"/>
+  <line x1="220" y1="250" x2="330" y2="200" stroke="#000" stroke-width="1"/>
+  
+  <!-- Labels -->
+  <text x="20" y="150" font-family="Arial" font-size="14" fill="#000">Input</text>
+  <text x="170" y="290" font-family="Arial" font-size="14" fill="#000">Hidden</text>
+  <text x="330" y="250" font-family="Arial" font-size="14" fill="#000">Output</text>
+  <text x="210" y="117" font-family="Arial" font-size="12" fill="#FF0000">Dropped</text>
+  <text x="210" y="132" font-family="Arial" font-size="12" fill="#FF0000">Out</text>
+</svg>

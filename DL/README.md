@@ -1,5 +1,8 @@
 # Deep Learning
 
+- [Assignment](./Assignment%201.pdf)
+- [Assigment Typst Source](./Assignment%201.typ)
+
 ## SENIOR
 
 - [Document](./DL_SENIOR.pdf)
