@@ -372,7 +372,7 @@ class ANSI:
     
     END = "\033[0m"
 
-KEY = b"Devansh Parapalli"
+KEY = b"DevanshParapalli"
 cipher = Blowfish(KEY, P_ARRAY, S_BOXES)
 
 plaintext = b"Practical 05 - Blowfish Algorithm"
