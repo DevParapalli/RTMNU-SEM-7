@@ -1,6 +1,6 @@
 # Practical 04
 
-Aim: To write a program to implement Playfair cipher for encryption and decryption.
+Aim: To write a program to implement DES cipher for encryption and decryption.
 
 [PDF](./practical-04.pdf)
 
