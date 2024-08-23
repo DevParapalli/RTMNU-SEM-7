@@ -119,29 +119,6 @@ class RSA:
             raise ValueError("[PKCS1 v1.5] PaddingError: Separator not found.")
 
         return padded[sep_idx+1:]
-        
-    @staticmethod
-    def encrypt(plaintext: bytes, public_key: tuple[int, int]) -> bytes:
-        e, n = public_key
-        
-        padded = RSA.pad_pkcs1(plaintext, n)
-        
-        x = int.from_bytes(padded, "big")
-
-        if x >= n:
-            raise ValueError("[RSA] Padded message is too large to encrypt using this key")
-        
-        c = pow(x, e, n)
-        return c.to_bytes((n.bit_length() + 7) // 8)
-            
-    def decrypt(self, ciphertext: bytes) -> bytes:
-        c = int.from_bytes(ciphertext, "big")
-        if c >= self.n:
-            raise ValueError("[RSA] Ciphertext is too large to decrypt for this key")
-        
-        m = pow(c, self.d, self.n)
-        padded = m.to_bytes((self.n.bit_length() + 7) // 8)
-        return RSA.unpad_pkcs1(padded)
     
     def sign(self, message: bytes) -> bytes:
         """
