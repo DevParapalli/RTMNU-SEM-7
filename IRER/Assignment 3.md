@@ -318,7 +318,7 @@ Uses of syngas:
 4. Scale-up issues: Maintaining performance at larger scales can be challenging.
 5. Capital intensity: High initial investment costs.
 
-The sketch should illustrate the key components mentioned above, showing the flow of feedstock, air/oxygen, and syngas through the system. It should also depict the different zones within the gasifier (drying, pyrolysis, oxidation, and reduction) and the gas cleaning and conditioning equipment.
+   The sketch should illustrate the key components mentioned above, showing the flow of feedstock, air/oxygen, and syngas through the system. It should also depict the different zones within the gasifier (drying, pyrolysis, oxidation, and reduction) and the gas cleaning and conditioning equipment.
 
 # KVIC Digester: Constructional Details and Working
 
