@@ -14,7 +14,7 @@ os.environ["GROQ_API_KEY"] = "gsk_TsfCJ6pj20nYokAaf5fxWGdyb3FYJUe7VXX3OMtD1aPsII
 embeddings = HuggingFaceEmbeddings()
 
 # Initialize the Groq model
-llm = ChatGroq(model_name="mixtral-8x7b-32768", temperature=0)
+llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0, stop_sequences=["<EOS>"])
 
 def process_pdf(uploaded_file):
     # Save the uploaded file temporarily
