@@ -3,45 +3,45 @@
 The **Chinese Remainder Theorem** (CRT) is a fundamental result in number theory, particularly useful for solving systems of simultaneous congruences with pairwise coprime moduli. It provides both an existence and uniqueness result for such systems and has applications in cryptography, coding theory, and computational mathematics. Here's a detailed breakdown of the theorem at a more advanced level:
 
 ### Statement of the Theorem
-Let \( n_1, n_2, \dots, n_k \) be pairwise coprime integers, i.e., \( \gcd(n_i, n_j) = 1 \) for all \( i \neq j \). Consider a system of congruences:
+Let \\( n_1, n_2, \\dots, n_k \\) be pairwise coprime integers, i.e., \\( \\gcd(n_i, n_j) = 1 \\) for all \\( i \\neq j \\). Consider a system of congruences:
 
-\[
-x \equiv a_1 \ (\text{mod} \ n_1)
-\]
-\[
-x \equiv a_2 \ (\text{mod} \ n_2)
-\]
-\[
-\vdots
-\]
-\[
-x \equiv a_k \ (\text{mod} \ n_k)
-\]
+\\[
+x \\equiv a_1 \\ (\\text{mod} \\ n_1)
+\\]
+\\[
+x \\equiv a_2 \\ (\\text{mod} \\ n_2)
+\\]
+\\[
+\\vdots
+\\]
+\\[
+x \\equiv a_k \\ (\\text{mod} \\ n_k)
+\\]
 
-The **Chinese Remainder Theorem** guarantees that there exists a unique solution \( x \in \mathbb{Z} \) modulo \( N = n_1 n_2 \cdots n_k \), i.e., there exists an integer \( x \) such that:
+The **Chinese Remainder Theorem** guarantees that there exists a unique solution \\( x \\in \\mathbb{Z} \\) modulo \\( N = n_1 n_2 \\cdots n_k \\), i.e., there exists an integer \\( x \\) such that:
 
-\[
-x \equiv a_i \ (\text{mod} \ n_i) \quad \text{for all } i = 1, 2, \dots, k
-\]
+\\[
+x \\equiv a_i \\ (\\text{mod} \\ n_i) \\quad \\text{for all } i = 1, 2, \\dots, k
+\\]
 
-Moreover, any other solution is congruent to this solution modulo \( N \), meaning if \( x_0 \) is a solution, then all solutions are of the form \( x_0 + N \cdot t \), where \( t \in \mathbb{Z} \).
+Moreover, any other solution is congruent to this solution modulo \\( N \\), meaning if \\( x_0 \\) is a solution, then all solutions are of the form \\( x_0 + N \\cdot t \\), where \\( t \\in \\mathbb{Z} \\).
 
 ### Proof Sketch
 1. **Existence**: 
-   To construct the solution explicitly, define \( N_i = \frac{N}{n_i} \), so that \( N_i \) is divisible by every \( n_j \) except \( n_i \) (since the \( n_i \)'s are pairwise coprime).
+   To construct the solution explicitly, define \\( N_i = \\frac{N}{n_i} \\), so that \\( N_i \\) is divisible by every \\( n_j \\) except \\( n_i \\) (since the \\( n_i \\)'s are pairwise coprime).
 
-   By Bézout's identity, for each \( i \), there exist integers \( M_i \) such that:
-   \[
-   M_i N_i \equiv 1 \ (\text{mod} \ n_i)
-   \]
-   Using this, the solution \( x \) can be written as:
-   \[
-   x = \sum_{i=1}^k a_i N_i M_i
-   \]
-   This expression ensures that \( x \equiv a_i \ (\text{mod} \ n_i) \) for each \( i \), as \( N_i M_i \equiv 1 \ (\text{mod} \ n_i) \), and \( N_j M_j \equiv 0 \ (\text{mod} \ n_i) \) for \( j \neq i \), since \( N_j \) is divisible by \( n_i \).
+   By Bézout's identity, for each \\( i \\), there exist integers \\( M_i \\) such that:
+   \\[
+   M_i N_i \\equiv 1 \\ (\\text{mod} \\ n_i)
+   \\]
+   Using this, the solution \\( x \\) can be written as:
+   \\[
+   x = \\sum_{i=1}^k a_i N_i M_i
+   \\]
+   This expression ensures that \\( x \\equiv a_i \\ (\\text{mod} \\ n_i) \\) for each \\( i \\), as \\( N_i M_i \\equiv 1 \\ (\\text{mod} \\ n_i) \\), and \\( N_j M_j \\equiv 0 \\ (\\text{mod} \\ n_i) \\) for \\( j \\neq i \\), since \\( N_j \\) is divisible by \\( n_i \\).
 
 2. **Uniqueness**: 
-   If there were two solutions \( x_1 \) and \( x_2 \), then \( x_1 \equiv x_2 \ (\text{mod} \ n_i) \) for each \( i \). Thus, \( x_1 - x_2 \) is divisible by each \( n_i \), implying \( x_1 \equiv x_2 \ (\text{mod} \ N) \).
+   If there were two solutions \\( x_1 \\) and \\( x_2 \\), then \\( x_1 \\equiv x_2 \\ (\\text{mod} \\ n_i) \\) for each \\( i \\). Thus, \\( x_1 - x_2 \\) is divisible by each \\( n_i \\), implying \\( x_1 \\equiv x_2 \\ (\\text{mod} \\ N) \\).
 
 ### Application of CRT
 The Chinese Remainder Theorem is especially useful in scenarios where computations are broken down into smaller, more manageable moduli. This is commonly applied in:
@@ -54,35 +54,35 @@ The Chinese Remainder Theorem is especially useful in scenarios where computatio
 
 ### Example
 Suppose we have the following system of congruences:
-\[
-x \equiv 2 \ (\text{mod} \ 3)
-\]
-\[
-x \equiv 3 \ (\text{mod} \ 5)
-\]
-\[
-x \equiv 2 \ (\text{mod} \ 7)
-\]
+\\[
+x \\equiv 2 \\ (\\text{mod} \\ 3)
+\\]
+\\[
+x \\equiv 3 \\ (\\text{mod} \\ 5)
+\\]
+\\[
+x \\equiv 2 \\ (\\text{mod} \\ 7)
+\\]
 
-Here, the moduli are \( 3, 5, 7 \), which are pairwise coprime. We can apply the Chinese Remainder Theorem:
+Here, the moduli are \\( 3, 5, 7 \\), which are pairwise coprime. We can apply the Chinese Remainder Theorem:
 
-1. Compute \( N = 3 \times 5 \times 7 = 105 \).
-2. For each \( i \):
-   - \( N_1 = \frac{105}{3} = 35 \), and find \( M_1 \) such that \( 35 M_1 \equiv 1 \ (\text{mod} \ 3) \). Using the extended Euclidean algorithm, \( M_1 = 2 \).
-   - \( N_2 = \frac{105}{5} = 21 \), and find \( M_2 \) such that \( 21 M_2 \equiv 1 \ (\text{mod} \ 5) \). We get \( M_2 = 1 \).
-   - \( N_3 = \frac{105}{7} = 15 \), and find \( M_3 \) such that \( 15 M_3 \equiv 1 \ (\text{mod} \ 7) \). We get \( M_3 = 1 \).
+1. Compute \\( N = 3 \\times 5 \\times 7 = 105 \\).
+2. For each \\( i \\):
+   - \\( N_1 = \\frac{105}{3} = 35 \\), and find \\( M_1 \\) such that \\( 35 M_1 \\equiv 1 \\ (\\text{mod} \\ 3) \\). Using the extended Euclidean algorithm, \\( M_1 = 2 \\).
+   - \\( N_2 = \\frac{105}{5} = 21 \\), and find \\( M_2 \\) such that \\( 21 M_2 \\equiv 1 \\ (\\text{mod} \\ 5) \\). We get \\( M_2 = 1 \\).
+   - \\( N_3 = \\frac{105}{7} = 15 \\), and find \\( M_3 \\) such that \\( 15 M_3 \\equiv 1 \\ (\\text{mod} \\ 7) \\). We get \\( M_3 = 1 \\).
 
 Thus, the solution is:
-\[
-x = 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1 = 140 + 63 + 30 = 233
-\]
+\\[
+x = 2 \\cdot 35 \\cdot 2 + 3 \\cdot 21 \\cdot 1 + 2 \\cdot 15 \\cdot 1 = 140 + 63 + 30 = 233
+\\]
 
-Finally, reduce \( 233 \) modulo \( 105 \):
-\[
-233 \equiv 23 \ (\text{mod} \ 105)
-\]
+Finally, reduce \\( 233 \\) modulo \\( 105 \\):
+\\[
+233 \\equiv 23 \\ (\\text{mod} \\ 105)
+\\]
 
-Thus, the solution is \( x \equiv 23 \ (\text{mod} \ 105) \).
+Thus, the solution is \\( x \\equiv 23 \\ (\\text{mod} \\ 105) \\).
 
 ### Conclusion
 The Chinese Remainder Theorem is a powerful tool in both theoretical and applied mathematics. Its utility in breaking down problems into smaller, more computationally feasible parts, while ensuring both the existence and uniqueness of solutions, makes it indispensable in areas such as number theory, cryptography, and computer science.
@@ -173,19 +173,19 @@ Applications of RSA:
 
 #### **Elliptic Curves and Mathematical Foundation**
 An elliptic curve is defined by an equation of the form:
-\[
+\\[
 y^2 = x^3 + ax + b
-\]
-where \(a\) and \(b\) are constants that define the curve. The elliptic curve must satisfy the condition:
-\[
-4a^3 + 27b^2 \neq 0
-\]
+\\]
+where \\(a\\) and \\(b\\) are constants that define the curve. The elliptic curve must satisfy the condition:
+\\[
+4a^3 + 27b^2 \\neq 0
+\\]
 to ensure that the curve does not have any singular points.
 
-The points on the curve, along with a point at infinity (denoted as \(\mathcal{O}\)), form an abelian group. The key property of elliptic curves used in cryptography is the difficulty of solving the **Elliptic Curve Discrete Logarithm Problem (ECDLP)**, which states that given two points \(P\) and \(Q = kP\) on the curve, it is computationally infeasible to determine \(k\), even though \(P\) and \(Q\) are known. This difficulty underpins the security of ECC.
+The points on the curve, along with a point at infinity (denoted as \\(\\mathcal{O}\\)), form an abelian group. The key property of elliptic curves used in cryptography is the difficulty of solving the **Elliptic Curve Discrete Logarithm Problem (ECDLP)**, which states that given two points \\(P\\) and \\(Q = kP\\) on the curve, it is computationally infeasible to determine \\(k\\), even though \\(P\\) and \\(Q\\) are known. This difficulty underpins the security of ECC.
 
 #### **ECC in Cryptography**
-ECC works by choosing a generator point \(G\) on the elliptic curve, and then defining the private key as a randomly chosen integer \(d\), and the corresponding public key as \(Q = dG\). This setup is similar to other public-key systems like RSA, but the security level can be maintained with much smaller key sizes due to the hardness of ECDLP.
+ECC works by choosing a generator point \\(G\\) on the elliptic curve, and then defining the private key as a randomly chosen integer \\(d\\), and the corresponding public key as \\(Q = dG\\). This setup is similar to other public-key systems like RSA, but the security level can be maintained with much smaller key sizes due to the hardness of ECDLP.
 
 For example, a 256-bit key in ECC provides security comparable to a 3072-bit RSA key. This makes ECC very attractive for environments with limited resources, such as mobile devices or embedded systems.
 
