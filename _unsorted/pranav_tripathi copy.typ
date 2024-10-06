@@ -1,10 +1,10 @@
 #import "@preview/charged-ieee:0.1.0": ieee
 
 #show: ieee.with(
-  title: [SHELF STACK: Streamlining Inventory Management with AI
+  title: [SHELF STACK: Streamlining Inventory Management
 ],
   abstract: [
-    This paper introduces SHELF STACK, a robust inventory management system designed to address the complexities of fragmented inventory data and operational inefficiencies. Utilizing AI-driven insights and advanced machine learning techniques, SHELF STACK features a modular architecture powered by Flutter, FastAPI, and real-time data processing. The system offers significant improvements in inventory accuracy, reducing stock discrepancies by 80%, and streamlines workflows with predictive analytics. User studies highlight the app’s success in minimizing manual data input and increasing overall inventory management efficiency. The paper discusses SHELF STACK's design, implementation, and its application across retail, warehousing, and supply chain sectors.
+    This paper introduces SHELF STACK, a robust inventory management system designed to address the complexities of fragmented inventory data and operational inefficiencies. Utilizing insights and advanced machine learning techniques, SHELF STACK features a modular architecture powered by Flutter, FastAPI, and real-time data processing. The system offers significant improvements in inventory accuracy, reducing stock discrepancies by 80%, and streamlines workflows with predictive analytics. User studies highlight the app’s success in minimizing manual data input and increasing overall inventory management efficiency. The paper discusses SHELF STACK's design, implementation, and its application across retail, warehousing, and supply chain sectors.
   ],
   authors: (
     (
@@ -104,6 +104,8 @@ Overall, the Smart Inventory Management System aims to revolutionize the way bus
 - Strengths: Supports complex sales channels and integrations with over 550 third-party applications.
 - Weaknesses: Can be expensive for small businesses and has a complex setup process.
 
+\ \
+
 == Veeqo
 
 - Overview: Veeqo is an inventory and shipping platform designed for multi-channel retailers.
@@ -151,12 +153,12 @@ ShelfStack can assist universities, labs, and research institutions in managing 
 Use Case: A research laboratory employs ShelfStack to manage its inventory of scientific instruments and consumables. When certain materials fall below a pre-defined threshold, the system triggers an order for restocking, ensuring uninterrupted research activities.
 
 == Corporate Inventory Management
-For businesses, ShelfStack can function as a comprehensive inventory management solution to track products, raw materials, and office supplies. It can integrate with sales data to provide real-time stock levels, forecast demand, and automate purchasing decisions. Employees can easily locate product information, check stock availability, and retrieve relevant documents for compliance or auditing purposes.
+For businesses, ShelfStack can function as a comprehensive inventory management solution to track products, raw materials, and office supplies. It can integrate with sales data to provide real-time stock levels, forecast demand, and automate purchasing decisions. Employees can easily locate product information, check stock availability, and retrieve relevant documents for compliance or auditing purposes. @silver-1999
 
 Use Case: A retail company uses ShelfStack to track stock across multiple warehouses. The system provides real-time updates on product levels, automatically reorders popular items, and integrates with the company's e-commerce platform for seamless sales and inventory management.
 
 == Supply Chain and Logistics Optimization
-ShelfStack can be used by supply chain managers to oversee complex logistics processes, ensuring efficient stock movement between suppliers, warehouses, and customers. The system can analyze historical data to predict demand, minimize stockouts, and optimize stock distribution across multiple locations. It also helps in identifying potential supply chain disruptions and suggests alternative solutions.
+ShelfStack can be used by supply chain managers to oversee complex logistics processes, ensuring efficient stock movement between suppliers, warehouses, and customers. The system can analyze historical data to predict demand, minimize stockouts, and optimize stock distribution across multiple locations. It also helps in identifying potential supply chain disruptions and suggests alternative solutions. @yunxiang-2024
 
 Use Case: A large-scale distributor utilizes ShelfStack to monitor stock across various distribution centers. The system uses predictive analytics to optimize stock replenishment schedules and mitigate delays caused by supply chain bottlenecks.
 
@@ -176,7 +178,7 @@ ShelfStack can be implemented in manufacturing environments to manage raw materi
 Use Case: A factory adopts ShelfStack to manage its production inventory, ensuring that raw materials are available as needed and automatically generating procurement orders to prevent production delays.
 
 == Pharmaceutical Inventory Control
-Pharmacies and healthcare institutions can utilize ShelfStack to track medications, medical supplies, and other critical healthcare inventory. It helps ensure compliance with regulatory requirements by maintaining accurate records and tracking expiration dates, preventing overstocking or understocking of essential supplies.
+Pharmacies and healthcare institutions can utilize ShelfStack to track medications, medical supplies, and other critical healthcare inventory. It helps ensure compliance with regulatory requirements by maintaining accurate records and tracking expiration dates, preventing overstocking or understocking of essential supplies. @dhakal-2024
 
 Use Case: A hospital uses ShelfStack to track medical supplies and medications, ensuring that expired items are removed from stock and critical medications are always available in the correct quantities.
 
@@ -398,8 +400,8 @@ app.logoutUser();
 == Limited Integration with External Systems
 While ShelfStack provides basic integrations with common e-commerce platforms and point-of-sale (POS) systems, it currently lacks deeper integration with enterprise resource planning (ERP) systems and advanced supply chain management platforms. This limits its use for larger businesses with complex operational needs.
 
-== Lack of AI-Driven Predictive Analytics
-Although ShelfStack offers real-time stock tracking and automated reordering, its predictive analytics capabilities are still in early stages. It doesn't fully leverage AI to anticipate demand fluctuations, seasonal trends, or supply chain disruptions, which could improve inventory planning.
+// == Lack of AI-Driven Predictive Analytics
+// Although ShelfStack offers real-time stock tracking and automated reordering, its predictive analytics capabilities are still in early stages. It doesn't fully leverage AI to anticipate demand fluctuations, seasonal trends, or supply chain disruptions, which could improve inventory planning.
 
 == No Multi-Warehouse Support
 In its current version, ShelfStack lacks robust support for managing inventory across multiple warehouses or locations, making it less effective for businesses that operate across distributed networks or in multiple geographic regions.
@@ -417,8 +419,8 @@ As ShelfStack is a cloud-based solution, users may be concerned about data priva
 Enhanced System Integrations
 Future versions will focus on integrating ShelfStack with ERP systems, advanced supply chain platforms, and other third-party applications, allowing businesses to synchronize inventory data seamlessly across all operational processes. This will improve cross-functional workflows, from procurement to fulfillment.
 
-== AI-Driven Insights and Predictive Analytics
-Upcoming versions of ShelfStack will incorporate AI-driven predictive analytics to forecast demand, identify trends, and optimize stock levels. These enhancements will help businesses prepare for seasonal variations and reduce the risk of stockouts or overstocking.
+// == AI-Driven Insights and Predictive Analytics
+// Upcoming versions of ShelfStack will incorporate AI-driven predictive analytics to forecast demand, identify trends, and optimize stock levels. These enhancements will help businesses prepare for seasonal variations and reduce the risk of stockouts or overstocking.
 
 == Multi-Warehouse and Multi-Location Support
 Future iterations will include support for multi-warehouse management, enabling businesses to track inventory across multiple locations, optimize distribution, and coordinate stock levels more effectively. This will cater to larger organizations with complex supply chains.
@@ -442,6 +444,8 @@ Future updates will include advanced analytics and reporting features, allowing 
 
 The performance of ShelfStack was evaluated through two approaches: an internal assessment conducted by our team and an external evaluation carried out by peer users. The goal was to measure the system's efficiency in real-world inventory management scenarios and gather usability feedback from test participants.
 
+\ \ \
+
 == Internal Evaluation
 We tested ShelfStack within our organization to manage various types of inventory, including office supplies, electronics, and warehouse stock. The system was used to update stock levels, track item locations, and automate restocking alerts. We also leveraged its analytics features to forecast demand and review inventory turnover rates. During the internal evaluation, we focused on how well the system fit into our workflow, its ability to minimize manual input, and its accuracy in tracking inventory.
 
@@ -452,8 +456,11 @@ To further evaluate ShelfStack, we conducted a peer-based usability study. The t
 
 After performing the tasks, participants were asked to rate their experience using the system. The evaluation focused on task-based performance metrics such as time to complete an action (e.g., adding a product or generating a report), accuracy of inventory data, and the ease of navigating the system.
 
+
 = Conclusions
 
 Users can easily manage and track their inventory with just a few clicks, significantly saving time and simplifying inventory control processes. The app offers customizable features, such as real-time inventory tracking, automated reordering, and flexible reporting options tailored to individual needs, providing substantial operational flexibility. 
+
 The development of Shelf-Stack raises awareness among low-income community members, such as shopkeepers and stationery sellers, about the benefits and efficiencies of modern inventory management. The app provides sales predictions based on market trends, enabling users to forecast the profit or loss of specific inventory items and make informed business decisions.
+#colbreak()
 Low-income users, such as shopkeepers, can manage their product lists and visualize inventory information through graphical representations. This feature allows for quick access and better understanding of inventory data, supporting business growth. The app implements robust security measures to efficiently protect user data. Additionally, it facilitates effective communication with customers about product availability, promotions, and helps reduce stockouts and backorders, thereby improving customer satisfaction and reducing frustrations.
