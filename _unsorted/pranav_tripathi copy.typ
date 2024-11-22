@@ -60,10 +60,12 @@
 
 The "Smart Inventory Management System" is an innovative solution designed to transform inventory management for businesses of all sizes. This project harnesses the power of modern technology to streamline and optimize inventory processes, enhancing efficiency, accuracy, and decision-making. @studypool
 
-Shelf-Stack is developed using Flutter, features a range of advanced functionalities tailored to meet the dynamic needs of contemporary businesses. One of the key features is effective data visualization through intuitive donut charts, which provide clear and actionable insights into inventory levels, trends, and performance metrics. This visual approach simplifies complex data, making it easier for users to understand and respond to inventory changes.
+Shelf-Stack is developed using Flutter, features a range of advanced functionalities tailored to meet the dynamic needs of contemporary businesses. 
+// One of the key features is effective data visualization through intuitive donut charts, which provide clear and actionable insights into inventory levels, trends, and performance metrics. 
+This visual approach simplifies complex data, making it easier for users to understand and respond to inventory changes.
 
 A standout feature of our system is the integration of predictive analysis powered by machine learning. This advanced capability enables Shelf-Stack to forecast inventory needs based on historical data and market trends, helping businesses to anticipate demand, reduce the risk of stockouts, and avoid overstock situations. 
-By providing predictive insights, the system empowers users to make proactive and informed decisions about their inventory. To ensure users are always informed, Shelf-Stack includes customizable notifications. 
+// By providing predictive insights, the system empowers users to make proactive and informed decisions about their inventory. To ensure users are always informed, Shelf-Stack includes customizable notifications. 
 
 Overall, the Smart Inventory Management System aims to revolutionize the way businesses manage their inventory. By integrating effective visualization tools, seamless data entry options, advanced predictive analytics, and real-time notifications, our system provides a comprehensive solution that enhances operational performance, reduces costs, and improves the overall efficiency of inventory management processes.
 
@@ -192,207 +194,207 @@ Key features such as real-time inventory tracking, order management, and predict
 
 Additionally, the system incorporates robust error handling and data validation to ensure data integrity and system reliability.
 
-== Psuedocode
+// == Psuedocode
 
-```javascript
-// User Class
-class User {
-  String userID;
-  String name;
-  String email;
-  User({this.userID, this.name, this.email});
-}
+// ```javascript
+// // User Class
+// class User {
+//   String userID;
+//   String name;
+//   String email;
+//   User({this.userID, this.name, this.email});
+// }
 
-// Item Class
-class Item {
-  String itemName;
-  String itemID;
-  int quantity;
-  double price;
-  String location; // Location in warehouse or store
-  String imageURL; // Image associated with the item
+// // Item Class
+// class Item {
+//   String itemName;
+//   String itemID;
+//   int quantity;
+//   double price;
+//   String location; // Location in warehouse or store
+//   String imageURL; // Image associated with the item
 
-  Item(this.itemID, this.itemName, this.quantity, this.price, this.location, this.imageURL);
-}
+//   Item(this.itemID, this.itemName, this.quantity, this.price, this.location, this.imageURL);
+// }
 
-// Order Class
-class Order {
-  String orderID;
-  User user;
-  List<Item> items;
-  DateTime orderDate;
-  String status; // e.g., "Pending", "Shipped", "Delivered"
-  double totalPrice;
+// // Order Class
+// class Order {
+//   String orderID;
+//   User user;
+//   List<Item> items;
+//   DateTime orderDate;
+//   String status; // e.g., "Pending", "Shipped", "Delivered"
+//   double totalPrice;
 
-  Order({this.orderID, this.user, this.items, this.orderDate, this.status, this.totalPrice});
-}
+//   Order({this.orderID, this.user, this.items, this.orderDate, this.status, this.totalPrice});
+// }
 
-// Inventory Management App Class
-class InventoryManagementApp {
-  List<Item> availableItems = []; // Initialize with available items
-  List<Order> orders = []; // Initialize with placed orders
+// // Inventory Management App Class
+// class InventoryManagementApp {
+//   List<Item> availableItems = []; // Initialize with available items
+//   List<Order> orders = []; // Initialize with placed orders
 
-  // Authentication function
-  void authenticateWithEmail(String email, String password) {
-    // Firebase Email and Password Authentication Logic
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((result) => {
-        // User successfully authenticated
-        print('Authentication successful:', result.user);
-      })
-      .catch((error) => {
-        // Error occurred during authentication
-        print('Authentication failed:', error);
-      });
-  }
+//   // Authentication function
+//   void authenticateWithEmail(String email, String password) {
+//     // Firebase Email and Password Authentication Logic
+//     firebase.auth().signInWithEmailAndPassword(email, password)
+//       .then((result) => {
+//         // User successfully authenticated
+//         print('Authentication successful:', result.user);
+//       })
+//       .catch((error) => {
+//         // Error occurred during authentication
+//         print('Authentication failed:', error);
+//       });
+//   }
 
-  // Logout Function
-  void logoutUser() {
-    firebase.auth().signOut()
-      .then(() => {
-        // User successfully logged out
-        print('User logged out');
-      })
-      .catch((error) => {
-        // Error occurred during logout
-        print('Logout failed:', error);
-      });
-  }
+//   // Logout Function
+//   void logoutUser() {
+//     firebase.auth().signOut()
+//       .then(() => {
+//         // User successfully logged out
+//         print('User logged out');
+//       })
+//       .catch((error) => {
+//         // Error occurred during logout
+//         print('Logout failed:', error);
+//       });
+//   }
 
-  // Function to view available items
-  void browseItems() {
-    // Display available items to the user
-    // e.g., show items on UI
-  }
+//   // Function to view available items
+//   void browseItems() {
+//     // Display available items to the user
+//     // e.g., show items on UI
+//   }
 
-  // Function to add item to inventory
-  void addItemToInventory(Item item) {
-    availableItems.add(item);
-    // Optionally: Write to Firestore or other database
-    writeItemToFirestore(item);
-  }
+//   // Function to add item to inventory
+//   void addItemToInventory(Item item) {
+//     availableItems.add(item);
+//     // Optionally: Write to Firestore or other database
+//     writeItemToFirestore(item);
+//   }
 
-  // Firestore function to write item data
-  void writeItemToFirestore(Item itemData) {
-    // Add a new document to the "inventory" collection
-    db.collection('inventory').add({
-      'itemName': itemData.itemName,
-      'quantity': itemData.quantity,
-      'price': itemData.price,
-      'location': itemData.location,
-      'imageURL': itemData.imageURL
-    })
-    .then((docRef) => {
-      // Item successfully written to Firestore
-      print('Item added with ID:', docRef.id);
-    })
-    .catch((error) => {
-      // Error occurred while writing item
-      print('Error adding item:', error);
-    });
-  }
+//   // Firestore function to write item data
+//   void writeItemToFirestore(Item itemData) {
+//     // Add a new document to the "inventory" collection
+//     db.collection('inventory').add({
+//       'itemName': itemData.itemName,
+//       'quantity': itemData.quantity,
+//       'price': itemData.price,
+//       'location': itemData.location,
+//       'imageURL': itemData.imageURL
+//     })
+//     .then((docRef) => {
+//       // Item successfully written to Firestore
+//       print('Item added with ID:', docRef.id);
+//     })
+//     .catch((error) => {
+//       // Error occurred while writing item
+//       print('Error adding item:', error);
+//     });
+//   }
 
-  // Function to place an order
-  void placeOrder(User user, List<Item> selectedItems) {
-    // Create a new order
-    Order newOrder = Order(
-      orderID: 'generatedID', // Generate a unique ID
-      user: user,
-      items: selectedItems,
-      orderDate: DateTime.now(),
-      status: 'Pending',
-      totalPrice: calculateTotalPrice(selectedItems)
-    );
-    orders.add(newOrder);
-    writeOrderToFirestore(newOrder);
-  }
+//   // Function to place an order
+//   void placeOrder(User user, List<Item> selectedItems) {
+//     // Create a new order
+//     Order newOrder = Order(
+//       orderID: 'generatedID', // Generate a unique ID
+//       user: user,
+//       items: selectedItems,
+//       orderDate: DateTime.now(),
+//       status: 'Pending',
+//       totalPrice: calculateTotalPrice(selectedItems)
+//     );
+//     orders.add(newOrder);
+//     writeOrderToFirestore(newOrder);
+//   }
 
-  // Firestore function to write order data
-  void writeOrderToFirestore(Order orderData) {
-    // Add a new document to the "orders" collection
-    db.collection('orders').add({
-      'userID': orderData.user.userID,
-      'items': orderData.items.map((item) => item.itemName).toList(),
-      'orderDate': orderData.orderDate,
-      'status': orderData.status,
-      'totalPrice': orderData.totalPrice
-    })
-    .then((docRef) => {
-      // Order successfully written to Firestore
-      print('Order placed with ID:', docRef.id);
-    })
-    .catch((error) => {
-      // Error occurred while placing order
-      print('Error placing order:', error);
-    });
-  }
+//   // Firestore function to write order data
+//   void writeOrderToFirestore(Order orderData) {
+//     // Add a new document to the "orders" collection
+//     db.collection('orders').add({
+//       'userID': orderData.user.userID,
+//       'items': orderData.items.map((item) => item.itemName).toList(),
+//       'orderDate': orderData.orderDate,
+//       'status': orderData.status,
+//       'totalPrice': orderData.totalPrice
+//     })
+//     .then((docRef) => {
+//       // Order successfully written to Firestore
+//       print('Order placed with ID:', docRef.id);
+//     })
+//     .catch((error) => {
+//       // Error occurred while placing order
+//       print('Error placing order:', error);
+//     });
+//   }
 
-  // Function to calculate total price of selected items
-  double calculateTotalPrice(List<Item> items) {
-    double total = 0;
-    items.forEach((item) {
-      total += item.price * item.quantity;
-    });
-    return total;
-  }
+//   // Function to calculate total price of selected items
+//   double calculateTotalPrice(List<Item> items) {
+//     double total = 0;
+//     items.forEach((item) {
+//       total += item.price * item.quantity;
+//     });
+//     return total;
+//   }
 
-  // Function to view all orders for a user
-  void viewOrders(User user) {
-    // Retrieve and display all orders associated with the user
-    // Display orders on UI or console
-  }
+//   // Function to view all orders for a user
+//   void viewOrders(User user) {
+//     // Retrieve and display all orders associated with the user
+//     // Display orders on UI or console
+//   }
 
-  // Function to update stock levels after an order is placed
-  void updateStockAfterOrder(Order order) {
-    order.items.forEach((item) {
-      Item currentItem = availableItems.firstWhere((i) => i.itemID == item.itemID);
-      currentItem.quantity -= item.quantity;
-      // Optionally: Update item quantity in Firestore
-      updateItemInFirestore(currentItem);
-    });
-  }
+//   // Function to update stock levels after an order is placed
+//   void updateStockAfterOrder(Order order) {
+//     order.items.forEach((item) {
+//       Item currentItem = availableItems.firstWhere((i) => i.itemID == item.itemID);
+//       currentItem.quantity -= item.quantity;
+//       // Optionally: Update item quantity in Firestore
+//       updateItemInFirestore(currentItem);
+//     });
+//   }
 
-  // Firestore function to update item quantity
-  void updateItemInFirestore(Item itemData) {
-    db.collection('inventory').doc(itemData.itemID).update({
-      'quantity': itemData.quantity
-    })
-    .then(() => {
-      // Item quantity successfully updated
-      print('Item quantity updated');
-    })
-    .catch((error) => {
-      // Error occurred while updating item
-      print('Error updating item:', error);
-    });
-  }
-}
+//   // Firestore function to update item quantity
+//   void updateItemInFirestore(Item itemData) {
+//     db.collection('inventory').doc(itemData.itemID).update({
+//       'quantity': itemData.quantity
+//     })
+//     .then(() => {
+//       // Item quantity successfully updated
+//       print('Item quantity updated');
+//     })
+//     .catch((error) => {
+//       // Error occurred while updating item
+//       print('Error updating item:', error);
+//     });
+//   }
+// }
 
-// Main program
-// Example usage of functions in the application
-InventoryManagementApp app = InventoryManagementApp();
+// // Main program
+// // Example usage of functions in the application
+// InventoryManagementApp app = InventoryManagementApp();
 
-// User login
-app.authenticateWithEmail("user@example.com", "password123");
+// // User login
+// app.authenticateWithEmail("user@example.com", "password123");
 
-// Browse available items
-app.browseItems();
+// // Browse available items
+// app.browseItems();
 
-// Add an item to inventory
-Item newItem = Item('itemID123', 'Laptop', 10, 999.99, 'Aisle 3', 'imageURL');
-app.addItemToInventory(newItem);
+// // Add an item to inventory
+// Item newItem = Item('itemID123', 'Laptop', 10, 999.99, 'Aisle 3', 'imageURL');
+// app.addItemToInventory(newItem);
 
-// Place an order
-User currentUser = User(userID: 'user123', name: 'John Doe', email: 'johndoe@example.com');
-List<Item> selectedItems = [newItem];
-app.placeOrder(currentUser, selectedItems);
+// // Place an order
+// User currentUser = User(userID: 'user123', name: 'John Doe', email: 'johndoe@example.com');
+// List<Item> selectedItems = [newItem];
+// app.placeOrder(currentUser, selectedItems);
 
-// View orders
-app.viewOrders(currentUser);
+// // View orders
+// app.viewOrders(currentUser);
 
-// Logout
-app.logoutUser();
-```
+// // Logout
+// app.logoutUser();
+// ```
 
 
 
@@ -462,5 +464,4 @@ After performing the tasks, participants were asked to rate their experience usi
 Users can easily manage and track their inventory with just a few clicks, significantly saving time and simplifying inventory control processes. The app offers customizable features, such as real-time inventory tracking, automated reordering, and flexible reporting options tailored to individual needs, providing substantial operational flexibility. 
 
 The development of Shelf-Stack raises awareness among low-income community members, such as shopkeepers and stationery sellers, about the benefits and efficiencies of modern inventory management. The app provides sales predictions based on market trends, enabling users to forecast the profit or loss of specific inventory items and make informed business decisions.
-#colbreak()
 Low-income users, such as shopkeepers, can manage their product lists and visualize inventory information through graphical representations. This feature allows for quick access and better understanding of inventory data, supporting business growth. The app implements robust security measures to efficiently protect user data. Additionally, it facilitates effective communication with customers about product availability, promotions, and helps reduce stockouts and backorders, thereby improving customer satisfaction and reducing frustrations.
